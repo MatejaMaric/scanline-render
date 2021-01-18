@@ -154,7 +154,7 @@ int main()
 
 	std::ofstream imageFile;
 	imageFile.open("./image.ppm");
-	imageFile << "P6\n" << image.imageWidth << " " << image.imageHeight << "\n255\n";
+	imageFile << "P6 " << image.imageWidth << " " << image.imageHeight << " 255 ";
 	imageFile.write((char*)image.pixels, image.imageWidth * image.imageHeight * 3);
 	imageFile.close();
 
